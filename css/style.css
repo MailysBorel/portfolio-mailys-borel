@@ -1,0 +1,210 @@
+:root {
+  --bg: #0b0b0c;
+  --panel: #111113;
+  --text: #ffffff;
+  --muted: #9aa0a6;
+  --accent: #ff2b2b;
+  --line: #1f1f23;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 64px;
+  border-bottom: 1px solid var(--line);
+}
+
+header h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+
+nav a {
+  color: var(--muted);
+  margin-left: 32px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+nav a:hover { color: var(--text); }
+
+.hero {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 64px;
+  padding: 80px 64px;
+}
+
+.hero h2 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 64px;
+  line-height: 1.1;
+  margin-bottom: 24px;
+}
+
+.hero p {
+  color: var(--muted);
+  max-width: 500px;
+  margin-bottom: 32px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 14px 28px;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 14px;
+  letter-spacing: 1px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: var(--accent);
+  color: #000;
+}
+
+.hero-visual {
+  border: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; 
+}
+
+.hero-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+section {
+  padding: 64px;
+  border-top: 1px solid var(--line);
+}
+
+section h3 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 32px;
+  margin-bottom: 32px;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 32px;
+}
+
+/* --- Styles spécifiques aux cartes de projet (élément <a>) --- */
+.project {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  padding: 24px;
+  transition: 0.3s;
+  
+  /* Ajout crucial pour faire du lien un bloc de contenu flexible */
+  display: block; 
+  text-decoration: none; /* Supprime le soulignement par défaut du lien */
+  pointer-events: auto;
+  position: relative;
+  z-index: 10;
+}
+
+.project:hover { border-color: var(--accent); }
+
+/* --- Uniformisation des couleurs du texte à l'intérieur du lien .project --- */
+
+/* Applique la couleur blanche au titre de la carte */
+.project h4 {
+  margin-bottom: 8px;
+  font-size: 18px;
+  color: var(--text); 
+}
+
+/* Applique la couleur muted au paragraphe de la carte */
+.project p {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+/* Force les liens :link et :visited à avoir la même couleur que le texte (blanc) */
+.project:link, 
+.project:visited {
+  color: var(--text); /* Assure que la carte reste blanche, visitée ou non */
+}
+
+/* --- Style pour l'image dans la carte --- */
+.project img {
+    margin-top: 16px; /* Ajoute de l'espace au-dessus de l'image */
+    display: block; /* Assure que l'image est un bloc pour bien occuper l'espace */
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.skill {
+  border: 1px solid var(--line);
+  padding: 10px 18px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+footer {
+  padding: 48px 64px;
+  border-top: 1px solid var(--line);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+footer input, footer textarea {
+  width: 100%;
+  background: transparent;
+  border: 1px solid var(--line);
+  color: var(--text);
+  padding: 12px;
+  margin-bottom: 12px;
+}
+
+footer button {
+  background: var(--accent);
+  border: none;
+  padding: 12px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+@media (max-width: 900px) {
+  .hero { grid-template-columns: 1fr; }
+  header, section, footer { padding: 32px; }
+}
+
+.link-more {
+  color: var(--accent);
+  text-decoration: underline;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.link-more:hover {
+  opacity: 0.8;
+}
+
