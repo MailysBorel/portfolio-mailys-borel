@@ -208,3 +208,10 @@ footer button {
   opacity: 0.8;
 }
 
+section h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 45px;
+  margin-bottom: 3px;
+}
+
+
