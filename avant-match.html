@@ -19,6 +19,7 @@
 <a href="index.html">Accueil</a>
 <a href="about.html">À propos</a>
 <a href="projects.html">Projets</a>
+<a href="#contact">Contact</a>
 </nav>
 </header>
 <main>
@@ -73,7 +74,29 @@ Aujourd’hui, la réalisation d’affiches d’avant-match représente pour moi
 </div>
 
 </footer>
+<button onclick="topFunction()" id="myBtn" title="Retourner en haut">↑</button>
 
+<script>
+// Récupérer le bouton
+let mybutton = document.getElementById("myBtn");
+
+// Quand l'utilisateur fait défiler 20px depuis le haut de la page, montrer le bouton
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// Quand l'utilisateur clique sur le bouton, faire remonter la page tout en haut
+function topFunction() {
+  document.body.scrollTop = 0; // Pour Safari
+  document.documentElement.scrollTop = 0; // Pour Chrome, Firefox, IE et Opera
+}
+</script>
 </body>
 </html>
 

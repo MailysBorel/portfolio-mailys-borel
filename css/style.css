@@ -215,3 +215,39 @@ section h1 {
 }
 
 
+#myBtn {
+  display: flex; /* Utiliser Flexbox pour un centrage facile */
+  justify-content: center; /* Centrer horizontalement */
+  align-items: center; /* Centrer verticalement */
+  
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  
+  /* COULEUR ROUGE DU SITE */
+  background-color: #D93845; 
+  
+  color: white; 
+  cursor: pointer;
+  
+  /* CRÉER UN BOUTON ROND ET CARRÉ */
+  width: 50px; 
+  height: 50px; 
+  padding: 0;
+  
+  border-radius: 50%; /* Rendre parfaitement rond */
+  
+  font-size: 24px; /* Grande taille pour la flèche (↑) */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+  transition: background-color 0.3s;
+}
+
+#myBtn:hover {
+  /* Assombrir légèrement le rouge au survol pour un effet de clic */
+  background-color: #A62A37;
+  opacity: 0.9;
+}
+
