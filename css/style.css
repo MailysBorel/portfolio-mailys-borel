@@ -7,7 +7,11 @@
   --line: #1f1f23;
 }
 
-* { box-sizing: border-box; margin: 0; padding: 0; }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 body {
   background: var(--bg);
@@ -37,7 +41,9 @@ nav a {
   font-size: 14px;
 }
 
-nav a:hover { color: var(--text); }
+nav a:hover {
+  color: var(--text);
+}
 
 .hero {
   display: grid;
@@ -80,7 +86,7 @@ nav a:hover { color: var(--text); }
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden; 
+  overflow: hidden;
 }
 
 .hero-visual img {
@@ -112,16 +118,19 @@ section h3 {
   border: 1px solid var(--line);
   padding: 24px;
   transition: 0.3s;
-  
+
   /* Ajout crucial pour faire du lien un bloc de contenu flexible */
-  display: block; 
-  text-decoration: none; /* Supprime le soulignement par défaut du lien */
+  display: block;
+  text-decoration: none;
+  /* Supprime le soulignement par défaut du lien */
   pointer-events: auto;
   position: relative;
   z-index: 10;
 }
 
-.project:hover { border-color: var(--accent); }
+.project:hover {
+  border-color: var(--accent);
+}
 
 /* --- Uniformisation des couleurs du texte à l'intérieur du lien .project --- */
 
@@ -129,7 +138,7 @@ section h3 {
 .project h4 {
   margin-bottom: 8px;
   font-size: 18px;
-  color: var(--text); 
+  color: var(--text);
 }
 
 /* Applique la couleur muted au paragraphe de la carte */
@@ -139,18 +148,21 @@ section h3 {
 }
 
 /* Force les liens :link et :visited à avoir la même couleur que le texte (blanc) */
-.project:link, 
+.project:link,
 .project:visited {
-  color: var(--text); /* Assure que la carte reste blanche, visitée ou non */
+  color: var(--text);
+  /* Assure que la carte reste blanche, visitée ou non */
 }
 
 /* --- Style pour l'image dans la carte --- */
 .project img {
-    margin-top: 16px; /* Ajoute de l'espace au-dessus de l'image */
-    display: block; /* Assure que l'image est un bloc pour bien occuper l'espace */
-    width: 100%;
-    height: auto;
-    border-radius: 4px;
+  margin-top: 16px;
+  /* Ajoute de l'espace au-dessus de l'image */
+  display: block;
+  /* Assure que l'image est un bloc pour bien occuper l'espace */
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
 }
 
 
@@ -175,7 +187,8 @@ footer {
   gap: 32px;
 }
 
-footer input, footer textarea {
+footer input,
+footer textarea {
   width: 100%;
   background: transparent;
   border: 1px solid var(--line);
@@ -193,8 +206,15 @@ footer button {
 }
 
 @media (max-width: 900px) {
-  .hero { grid-template-columns: 1fr; }
-  header, section, footer { padding: 32px; }
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  header,
+  section,
+  footer {
+    padding: 32px;
+  }
 }
 
 .link-more {
@@ -214,34 +234,247 @@ section h1 {
   margin-bottom: 3px;
 }
 
+/* --- Styles pour les pages de projet (.text-container) --- */
+.content-row {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  align-items: center;
+}
+
+@media (min-width: 900px) {
+  .content-row.right-image {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .content-row .text-container {
+    flex: 1;
+    padding-right: 48px;
+  }
+
+  .content-row .media-container {
+    flex: 1;
+  }
+}
+
+.text-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.text-container h1 {
+  font-size: 36px;
+  margin-bottom: 24px;
+  text-align: left;
+  line-height: 1.2;
+}
+
+.text-container h3 {
+  font-size: 24px;
+  margin-top: 40px;
+  margin-bottom: 16px;
+  color: var(--text);
+  text-align: left;
+}
+
+.text-container h4 {
+  font-size: 20px;
+  margin-top: 32px;
+  margin-bottom: 16px;
+  color: var(--text);
+  text-align: left;
+}
+
+.text-container p {
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 24px;
+  color: #d1d5db;
+  /* Un peu plus clair que muted pour la lecture */
+  text-align: left;
+  /* Plus agréable à lire pour de longs textes */
+}
+
+/* Cas où l'on veut forcer le centrage (ex: titres principaux si besoin) */
+.text-center {
+  text-align: center !important;
+}
+
+/* --- Galerie Grille --- */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 24px;
+  width: 100%;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.gallery-grid img:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(255, 43, 43, 0.4);
+  /* Légère lueur rouge */
+}
+
+/* --- Lightbox / Carrousel --- */
+.lightbox {
+  display: none;
+  /* Câché par défaut */
+  position: fixed;
+  z-index: 99999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(11, 11, 12, 0.95);
+  /* Couleur de fond foncée */
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.lightbox.active {
+  display: flex;
+  opacity: 1;
+}
+
+.lightbox-content {
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 4px;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.8);
+  animation: fadeIn 0.3s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 30px;
+  right: 50px;
+  color: var(--text);
+  font-size: 50px;
+  font-weight: 300;
+  cursor: pointer;
+  z-index: 10000;
+  transition: color 0.3s;
+}
+
+.lightbox-close:hover {
+  color: var(--accent);
+}
+
+.lightbox-prev,
+.lightbox-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text);
+  font-size: 60px;
+  font-weight: 300;
+  cursor: pointer;
+  padding: 16px 24px;
+  z-index: 10000;
+  user-select: none;
+  transition: all 0.2s;
+  background: rgba(255, 255, 255, 0.05);
+  /* Légèrement visible */
+  border-radius: 8px;
+  backdrop-filter: blur(4px);
+}
+
+.lightbox-prev:hover,
+.lightbox-next:hover {
+  color: var(--accent);
+  background: rgba(255, 43, 43, 0.1);
+  /* Subtile coloration au survol */
+}
+
+.lightbox-prev {
+  left: 30px;
+}
+
+.lightbox-next {
+  right: 30px;
+}
+
+@media (max-width: 768px) {
+
+  .lightbox-prev,
+  .lightbox-next {
+    font-size: 40px;
+    padding: 10px 15px;
+  }
+
+  .lightbox-prev {
+    left: 10px;
+  }
+
+  .lightbox-next {
+    right: 10px;
+  }
+
+  .lightbox-close {
+    top: 15px;
+    right: 20px;
+    font-size: 40px;
+  }
+}
+
 
 #myBtn {
-  display: flex; /* Utiliser Flexbox pour un centrage facile */
-  justify-content: center; /* Centrer horizontalement */
-  align-items: center; /* Centrer verticalement */
-  
+  display: flex;
+  /* Utiliser Flexbox pour un centrage facile */
+  justify-content: center;
+  /* Centrer horizontalement */
+  align-items: center;
+  /* Centrer verticalement */
+
   position: fixed;
   bottom: 25px;
   right: 25px;
   z-index: 99;
   border: none;
   outline: none;
-  
+
   /* COULEUR ROUGE DU SITE */
-  background-color: #D93845; 
-  
-  color: white; 
+  background-color: #D93845;
+
+  color: white;
   cursor: pointer;
-  
+
   /* CRÉER UN BOUTON ROND ET CARRÉ */
-  width: 50px; 
-  height: 50px; 
+  width: 50px;
+  height: 50px;
   padding: 0;
-  
-  border-radius: 50%; /* Rendre parfaitement rond */
-  
-  font-size: 24px; /* Grande taille pour la flèche (↑) */
-  box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+
+  border-radius: 50%;
+  /* Rendre parfaitement rond */
+
+  font-size: 24px;
+  /* Grande taille pour la flèche (↑) */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
   transition: background-color 0.3s;
 }
 
@@ -250,4 +483,3 @@ section h1 {
   background-color: #A62A37;
   opacity: 0.9;
 }
-
