@@ -1,135 +1,263 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio – Maïlys Borel</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/png" href="assets/images/logo_mailys_borel_blanc.png">
-  <link rel="stylesheet" href="css/style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Maïlys Borel — Graphiste & développeuse web</title>
+  <meta name="description" content="Portfolio de Maïlys Borel : affiches, identités visuelles et sites web. BUT MMI 3e année, en alternance chez Kqueo.">
+  <meta property="og:title" content="Maïlys Borel — Graphiste & développeuse web">
+  <meta property="og:description" content="Des affiches qui claquent et des sites qui tiennent la route.">
+  <meta property="og:image" content="images/photo_pro_mailys.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,300..800&family=Caveat:wght@600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-  <a href="index.html">
-  <img src="assets/images/logo_mailys_borel_blanc.png" alt="menu icon" class="menu-icon" height="60px" width="auto">
-  </a>
-
-<nav>
-<a href="index.html">Accueil</a>
-<a href="about.html">À propos</a>
-<a href="projects.html">Projets</a>
-<a href="#skills">Compétences</a>
-<a href="#contact">Contact</a>
-</nav>
+<!-- ============ NAV ============ -->
+<header class="nav" id="top">
+  <a href="#top" class="nav__logo" aria-label="Retour en haut"><img src="images/logo_mailys_borel_noir.png" alt="Logo Maïlys Borel"></a>
+  <nav class="nav__links" aria-label="Navigation principale">
+    <a href="#projets">Projets</a>
+    <a href="#apropos">À propos</a>
+    <a href="#outils">Outils</a>
+  </nav>
+  <a href="#contact" class="btn btn--ink nav__cta">On se parle ?</a>
+  <button class="nav__burger" aria-label="Ouvrir le menu" aria-expanded="false">Menu</button>
 </header>
 
-<div class="hero">
-  <div>
-    <h2>MAÏLYS<br>BOREL</h2>
-    <p>Etudiante en BUT MMI et passionnée par le graphisme.</p>
-    <a href="#projects" class="btn">VOIR MES PROJETS</a> <br> <br>
-<p>
-  Je m’appelle Maïlys Borel, j’ai 19 ans et je suis en 2ᵉ année de BUT Métiers du Multimédia
-  et de l’Internet à l’IUT de Meaux, dans le parcours Développement Web et Dispositifs
-  Interactifs. Je suis à la recherle d'une alternance 1 semaine entreprise /1 semaine école dans le développement web à partir de Septembre 2026.
-<br>
-<a href="about.html" class="link-more">LIRE PLUS</a> </p>
-  </div>
-  <div class="hero-visual">
-    <img src="assets/images/photo_de_profil_pro.png" alt="photo_présentation"  />
-  </div>
+<div class="menu" aria-hidden="true">
+  <button class="menu__close">Fermer ✕</button>
+  <a href="#projets">Projets</a>
+  <a href="#apropos">À propos</a>
+  <a href="#outils">Outils</a>
+  <a href="#contact">Contact</a>
 </div>
 
-<section id="projects">
-  <h3>PROJETS</h3>
-  <div class="projects">
+<main>
 
-    <a href="mairie-villeparisis.html" class="project">
-      <h4>Stage Mairie de Villeparisis</h4>
-      <p>Création d'affiches pour des évènements dans la ville.</p> <br>
-      <img src="assets/images/octobre_rose.png" alt="octobre rose"  height="auto" width="100%">
-    </a>
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <p class="hero__kicker mono">Portfolio — édition 2026</p>
 
-    <a href="avant-match.html" class="project">
-        <h4>Affiches avant-match football</h4>
-        <p>Création d'affiches d'avant-match de football pour des joueurs professionniels ou à des fins personnels.</p> <br>
-        <img src="assets/images/affiche Adrien.png" alt="affiche adrien"  height="auto" width="100%">
-    </a>
+  <div class="hero__top">
+    <h1 class="hero__title">
+      <span class="hero__line">MAÏLYS</span>
+      <span class="hero__line hero__line--2">BOREL</span>
+    </h1>
 
-    <a href="hikari.html" class="project">
-      <h4>Hikari</h4>
-      <p>Projet d'imagination de création d'une marque de vêtement techwear franco-japonaise avec réalisation de maquettes.</p> <br>
-        <img src="assets/images/hikari_accueil.png" alt="hikari mockup"  height="auto" width="100%">
-        <img src="assets/images/hikari2.png" alt="affiche adrien"  height="auto" width="100%">
-    </a>
-
+    <figure class="hero__portrait">
+      <img src="images/photo_pro_mailys.png" alt="Portrait de Maïlys Borel" data-fallback="Photo pro">
+      <span class="tape tape--hero" aria-hidden="true"></span>
+      <div class="sticker sticker--spin" aria-hidden="true">
+        <svg viewBox="0 0 200 200">
+          <defs><path id="circ" d="M100,100 m-72,0 a72,72 0 1,1 144,0 a72,72 0 1,1 -144,0"/></defs>
+          <text><textPath href="#circ">GRAPHISTE ✦ DEV WEB ✦ MMI ✦ ALTERNANTE ✦ </textPath></text>
+        </svg>
+        <span class="sticker__core">✺</span>
+      </div>
+      <figcaption class="note note--hero" aria-hidden="true">c'est moi !</figcaption>
+    </figure>
   </div>
-</section> 
 
-<section id="skills">
-  <h3>COMPÉTENCES</h3>
-  <div class="skills">
-    <div class="skill">HTML</div>
-    <div class="skill">CSS</div>
-    <div class="skill">PHP</div>
-    <div class="skill">JavaScript</div>
-    <div class="skill">React</div>
-    <div class="skill">Angular</div>
-    <div class="skill">TypeScript</div>
-    <div class="skill">Figma</div>
-    <div class="skill">Photoshop</div>
-    <div class="skill">Indesign</div>
-    <div class="skill">Illustrator</div>
-    <div class="skill">Première Pro</div>
-    
+  <div class="hero__bottom">
+    <p class="hero__pitch">
+      Je fais des <mark class="hl hl--yellow">affiches qui claquent</mark> et des
+      <mark class="hl hl--pink">sites qui tiennent la route</mark>. Entre Photoshop et VS Code, je ne choisis pas.
+    </p>
+    <ul class="hero__facts mono">
+      <li><span class="dot dot--green"></span>En alternance chez <strong>Kqueo</strong></li>
+      <li>BUT MMI — 3e année · IUT de Meaux</li>
+      <li>Parcours Dev web & dispositifs interactifs</li>
+    </ul>
+    <a href="#projets" class="btn btn--red btn--big">Voir mes projets <span aria-hidden="true">↓</span></a>
   </div>
 </section>
 
-<footer id="contact">
-  <div> 
-    <h3>CONTACT</h3> <br> <br>
-    <h3>EMAIL :</h3>
-    <p style="color: var(--muted)">borelmailys@gmail.com</p>
-<br>
-    <h3>TELEPHONE :</h3>
-    <p style="color: var(--muted)">07 82 57 67 95</p>
+<!-- ============ MARQUEE ============ -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee__track">
+    <span>AFFICHES</span><i>✺</i><span>IDENTITÉS</span><i>✺</i><span>UI / UX</span><i>✺</i><span>SITES WEB</span><i>✺</i><span>MOCKUPS</span><i>✺</i><span>FOOT</span><i>✺</i>
+    <span>AFFICHES</span><i>✺</i><span>IDENTITÉS</span><i>✺</i><span>UI / UX</span><i>✺</i><span>SITES WEB</span><i>✺</i><span>MOCKUPS</span><i>✺</i><span>FOOT</span><i>✺</i>
   </div>
-<br>
-  <div>
-  <a href="assets/CV_2026_Mailys_Borel.pdf" download class="btn">
-  Télécharger mon CV
-</a>
 </div>
 
+<!-- ============ PROJETS ============ -->
+<section class="projects" id="projets">
+  <div class="section-head">
+    <h2 class="section-title">Les projets<span class="count">04</span></h2>
+    <p class="section-sub">Trois terrains de jeu : la commande publique, la passion foot, et une marque inventée de A à Z. Cliquez, ça s'ouvre.</p>
+  </div>
 
+  <!-- Projet 1 -->
+  <article class="project project--pink" data-project="mairie">
+    <div class="project__text">
+      <span class="project__num">01</span>
+      <p class="project__meta mono">Stage · Juin – juillet 2025 · Photoshop</p>
+      <h3 class="project__title">Mairie de<br>Villeparisis</h3>
+      <p>Quatre semaines au service communication. Au programme : la campagne <strong>Octobre Rose</strong>, trois affiches pour la <strong>Fête de la musique</strong>, et une quinzaine de visuels pour la vie de la ville. Le défi : informer clairement sans perdre l'émotion, dans le cadre d'une charte institutionnelle.</p>
+      <ul class="tags"><li>Affiche</li><li>Commande publique</li><li>Hiérarchie de l'info</li></ul>
+      <button class="btn btn--ink" data-open="mairie">Ouvrir la galerie <span aria-hidden="true">→</span></button>
+    </div>
+    <div class="project__visual fan" data-open="mairie">
+      <img src="images/2025-octobre-rose.png" alt="Affiche Octobre Rose" loading="lazy">
+      <img src="images/Affiche FDM 2025.png" alt="Affiche Fête de la musique" loading="lazy">
+      <img src="images/forum des association 2025.png" alt="Affiche Forum des associations 2025" loading="lazy">
+      <span class="sticker-badge sticker-badge--yellow">+19 affiches</span>
+    </div>
+  </article>
+
+  <!-- Projet 2 -->
+  <article class="project project--green project--reverse" data-project="foot">
+    <div class="project__text">
+      <span class="project__num">02</span>
+      <p class="project__meta mono">Projet perso · En continu · Photoshop</p>
+      <h3 class="project__title">Affiches<br>avant-match</h3>
+      <p>Mes deux passions dans le même calque : le foot et la création visuelle. Pour des joueurs pros comme pour des proches, je compose des affiches de match — l'occasion de pousser la typo, la couleur et le traitement d'image toujours un cran plus loin.</p>
+      <ul class="tags"><li>Sport</li><li>Composition</li><li>Retouche</li></ul>
+      <button class="btn btn--ink" data-open="foot">Ouvrir la galerie <span aria-hidden="true">→</span></button>
+    </div>
+    <div class="project__visual fan" data-open="foot">
+      <img src="images/warren_zaire_emery_33.png" alt="Affiche Warren Zaïre-Emery" loading="lazy">
+      <img src="images/psg vs liverpool.png" alt="Affiche PSG vs Liverpool" loading="lazy">
+      <img src="images/lamine yamal.png" alt="Affiche Lamine Yamal" loading="lazy">
+      <span class="sticker-badge sticker-badge--red">14 affiches</span>
+    </div>
+  </article>
+
+  <!-- Projet 3 -->
+  <article class="project project--blue" data-project="circuit">
+    <div class="project__text">
+      <span class="project__num">03</span>
+      <p class="project__meta mono">Les 24h du Mans · Modélisation 3D</p>
+      <h3 class="project__title">Circuit des<br>24h du Mans</h3>
+      <p>Le sujet : modéliser un lieu emblématique de la culture d'un pays, puis écrire un article d'une vingtaine de lignes pour le raconter. Avec mon groupe, nous avons choisi le <strong>circuit des 24 Heures du Mans</strong>, monument de l'endurance automobile. On l'a modélisé en 3D et mis en ligne : depuis une carte satellite, on zoome sur Le Mans puis on entre dans le circuit.</p>
+      <ul class="tags"><li>Modélisation 3D</li><li>Web</li><li>Article</li></ul>
+      <a href="https://sae401-circuit-24h-du-mans.vercel.app/" class="btn btn--ink" target="_blank" rel="noopener">Visiter le site <span aria-hidden="true">↗</span></a>
+    </div>
+    <div class="project__visual screens" data-open="circuit">
+      <img src="images/Circuit_capture_1.png" alt="Globe satellite centré sur Le Mans" loading="lazy">
+      <img src="images/Circuit_capture_2.png" alt="Modélisation 3D du circuit des 24h du Mans" loading="lazy">
+      <span class="sticker-badge sticker-badge--yellow">Projet 3D</span>
+    </div>
+  </article>
+
+  <!-- Projet 4 -->
+  <article class="project project--yellow project--reverse" data-project="datasense">
+    <div class="project__text">
+      <span class="project__num">04</span>
+      <p class="project__meta mono">Visualisation de données</p>
+      <h3 class="project__title">DataSense</h3>
+      <p>Un site de visualisation de données connecté à une <strong>base de données via une API</strong>. On y explore des graphiques par <strong>région</strong> ou par <strong>département</strong>, et surtout on peut les <strong>comparer entre eux</strong> sur les mêmes critères pour faire parler les chiffres.</p>
+      <ul class="tags"><li>DataSense</li><li>API</li><li>Base de données</li></ul>
+      <a href="https://dataviz-datasense.alwaysdata.net/" class="btn btn--ink" target="_blank" rel="noopener">Visiter le site <span aria-hidden="true">↗</span></a>
+    </div>
+    <div class="project__visual screens" data-open="datasense">
+      <img src="images/Datasense_capture_1.png" alt="Visualisation de données par graphique" loading="lazy">
+      <img src="images/Datasense_capture_2.png" alt="Comparaison de départements sur DataSense" loading="lazy">
+      <span class="sticker-badge sticker-badge--red">DataSense</span>
+    </div>
+  </article>
+
+  <!-- À venir -->
+  <article class="project project--soon">
+    <p class="mono">Projet 05</p>
+    <p class="soon__title">En cours de production chez Kqueo…</p>
+    <p class="note">promis, ça arrive ✍︎</p>
+  </article>
+</section>
+
+<!-- ============ À PROPOS ============ -->
+<section class="about" id="apropos">
+  <div class="about__grid">
+    <div class="about__photo">
+      <img src="images/photo_pro_mailys.png" alt="Maïlys Borel" loading="lazy" data-fallback="MB">
+      <span class="tape tape--tl"></span><span class="tape tape--br"></span>
+      <p class="note note--photo">toujours une idée d'affiche en tête</p>
+    </div>
+    <div class="about__text">
+      <h2 class="section-title section-title--sm">Salut, moi c'est Maïlys.</h2>
+      <p class="about__lead">Étudiante en 3<sup>e</sup> année de <strong>BUT Métiers du Multimédia et de l'Internet</strong> à l'IUT de Meaux, parcours développement web. Aujourd'hui en <span class="hl hl--yellow">alternance chez Kqueo</span>, une semaine en entreprise, une semaine à l'école.</p>
+      <p>J'aime quand le graphisme et le code se parlent : une affiche se construit comme une interface — une hiérarchie, un rythme, un message qui doit passer en deux secondes. Et un site, c'est aussi une composition.</p>
+
+      <ol class="timeline">
+        <li><span class="mono">Sept. 2026 →</span><p><strong>Alternance — Kqueo</strong><br>BUT MMI 3<sup>e</sup> année en rythme alterné</p></li>
+        <li><span class="mono">Mars – Juin. 2026</span><p><strong>Stage — Kqueo</strong><br>Graphiste / Web developpeur E-commerce</p></li>
+        <li><span class="mono">Juin – juil. 2025</span><p><strong>Stage — Mairie de Villeparisis</strong><br>Communication & création d'affiches</p></li>
+        <li><span class="mono">Sept. 2024</span><p><strong>Entrée en BUT MMI</strong><br>IUT de Meaux</p></li>
+      </ol>
+      <a href="assets/CV_2026_Mailys_Borel.pdf" class="btn btn--ink" download>Télécharger mon CV <span aria-hidden="true">↓</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ OUTILS ============ -->
+<section class="tools" id="outils">
+  <div class="section-head">
+    <h2 class="section-title">La boîte à outils</h2>
+    <p class="section-sub">Attrapez une étiquette, déplacez-la. <span class="note note--inline">vas-y, essaie →</span></p>
+  </div>
+  <div class="board" aria-label="Compétences">
+    <ul class="board__group" aria-label="Design">
+      <li class="chip chip--red">Photoshop</li>
+      <li class="chip chip--yellow">Illustrator</li>
+      <li class="chip chip--pink">InDesign</li>
+      <li class="chip chip--cream">Premiere Pro</li>
+      <li class="chip chip--blue">Figma</li>
+    </ul>
+    <ul class="board__group" aria-label="Développement">
+      <li class="chip chip--ink">HTML</li>
+      <li class="chip chip--ink">CSS</li>
+      <li class="chip chip--yellow">JavaScript</li>
+      <li class="chip chip--blue">TypeScript</li>
+      <li class="chip chip--green">React</li>
+      <li class="chip chip--red">Angular</li>
+      <li class="chip chip--pink">PHP</li>
+    </ul>
+    <span class="board__label board__label--a mono">← côté design</span>
+    <span class="board__label board__label--b mono">côté code →</span>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="contact" id="contact">
+  <p class="mono contact__kicker">Contact</p>
+  <h2 class="contact__title">On fait<br>un truc <span class="contact__burst">ensemble ?</span></h2>
+  <div class="contact__actions">
+    <button class="contact__mail" data-copy="borelmailys@gmail.com">
+      borelmailys@gmail.com
+      <span class="contact__hint mono">cliquer pour copier</span>
+    </button>
+    <a href="tel:+33782576795" class="contact__phone mono">07 82 57 67 95</a>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <span> © 2026 Maïlys Borel</span>
 </footer>
 
+<a href="#top" class="to-top" aria-label="Revenir en haut">↑</a>
 
-<script>
+<!-- ============ GALERIE ============ -->
+<div class="lightbox" role="dialog" aria-modal="true" aria-label="Galerie du projet" hidden>
+  <div class="lightbox__bar">
+    <p class="lightbox__title"></p>
+    <p class="lightbox__count mono"></p>
+    <button class="lightbox__close" aria-label="Fermer">Fermer ✕</button>
+  </div>
+  <div class="lightbox__stage">
+    <button class="lightbox__nav lightbox__nav--prev" aria-label="Image précédente">←</button>
+    <figure><img alt=""><figcaption class="mono"></figcaption></figure>
+    <button class="lightbox__nav lightbox__nav--next" aria-label="Image suivante">→</button>
+  </div>
+  <div class="lightbox__thumbs"></div>
+</div>
 
-  
-  // Animation simple au scroll
-  const projects = document.querySelectorAll('.project');
+<div class="toast mono" role="status" aria-live="polite"></div>
 
-  window.addEventListener('scroll', () => {
-    const trigger = window.innerHeight * 0.85;
-    projects.forEach(p => {
-      const top = p.getBoundingClientRect().top;
-      if (top < trigger) {
-        p.style.transform = 'translateY(0)';
-        p.style.opacity = '1';
-      }
-    });
-  });
-
-  projects.forEach(p => {
-    p.style.transform = 'translateY(40px)';
-    p.style.opacity = '0';
-    p.style.transition = '0.6s';
-  });
-</script>
-
+<script src="main.js"></script>
 </body>
-
 </html>
