@@ -51,15 +51,15 @@
     circuit: {
       title: "Circuit des 24h du Mans",
       files: [
-        ["circuit_1.png", "Le globe satellite"],
-        ["circuit_2.png", "Le circuit modélisé en 3D"],
+        ["Circuit_capture_1.png", "La carte satellite"],
+        ["Circuit_capture_2.png", "Le circuit modélisé en 3D"],
       ],
     },
     datasense: {
       title: "DataSense",
       files: [
-        ["datasense_1.png", "Graphiques par région"],
-        ["datasense_2.png", "Comparaison entre départements"],
+        ["Datasense_capture_1.png", "Graphiques par région"],
+        ["Datasense_capture_2.png", "Comparaison entre départements"],
       ],
     },
   };
