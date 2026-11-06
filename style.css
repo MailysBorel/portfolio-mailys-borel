@@ -95,7 +95,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
 }
 .nav__logo {
   font-weight: 800; font-size: 1.6rem; text-decoration: none;
-  font-variation-settings: "wdth" 75; letter-spacing: -.02em;
+  font-stretch: 75%; letter-spacing: -.02em;
 }
 .nav__logo { display: flex; align-items: center; }
 .nav__logo img { height: 40px; width: auto; display: block; }
@@ -128,7 +128,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .menu a {
   font-size: clamp(3rem, 14vw, 6rem); font-weight: 800; line-height: 1;
   text-decoration: none; text-transform: uppercase;
-  font-variation-settings: "wdth" 75;
+  font-stretch: 75%;
 }
 .menu__close {
   position: absolute; top: 16px; right: var(--gutter);
@@ -147,7 +147,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .hero__title {
   margin: 0;
   font-weight: 800;
-  font-variation-settings: "wdth" 75, "opsz" 96;
+  font-stretch: 75%;
   font-size: clamp(4rem, 23.5vw, 24rem);
   line-height: .8;
   letter-spacing: -.035em;
@@ -233,7 +233,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
   padding: .55rem 0;
   animation: marquee 28s linear infinite;
   font-weight: 800; font-size: clamp(1.4rem, 3vw, 2.6rem);
-  font-variation-settings: "wdth" 75;
+  font-stretch: 75%;
   white-space: nowrap;
 }
 .marquee__track i { font-style: normal; color: var(--yellow); }
@@ -250,7 +250,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .section-title {
   margin: 0;
   font-weight: 800;
-  font-variation-settings: "wdth" 75;
+  font-stretch: 75%;
   font-size: clamp(3rem, 9vw, 8.5rem);
   line-height: .85; letter-spacing: -.03em;
   text-transform: uppercase;
@@ -290,7 +290,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .project--reverse .project__text { order: 2; }
 .project__num {
   position: absolute;
-  font-weight: 800; font-variation-settings: "wdth" 75;
+  font-weight: 800; font-stretch: 75%;
   font-size: clamp(9rem, 22vw, 20rem); line-height: .7;
   right: clamp(12px, 2vw, 32px); bottom: -.05em;
   color: transparent; -webkit-text-stroke: 2.5px currentColor;
@@ -305,7 +305,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
 }
 .project__title {
   margin: 0 0 1rem;
-  font-weight: 800; font-variation-settings: "wdth" 75;
+  font-weight: 800; font-stretch: 75%;
   font-size: clamp(2.8rem, 6.5vw, 6rem);
   line-height: .85; letter-spacing: -.03em; text-transform: uppercase;
 }
@@ -371,7 +371,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
 }
 .project--soon > p { margin: 0; }
 .soon__title {
-  font-weight: 800; font-variation-settings: "wdth" 75;
+  font-weight: 800; font-stretch: 75%;
   font-size: clamp(1.8rem, 4vw, 3.4rem); line-height: 1; text-transform: uppercase;
 }
 
@@ -443,7 +443,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .board__label--a { left: 20px; }
 .board__label--b { right: 20px; }
 .chip {
-  font-weight: 800; font-variation-settings: "wdth" 80;
+  font-weight: 800; font-stretch: 80%;
   font-size: clamp(1.2rem, 2.4vw, 2.2rem);
   padding: .35em .8em;
   border: var(--line); border-radius: 999px;
@@ -476,7 +476,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .contact__kicker { margin: 0 0 1rem; }
 .contact__title {
   margin: 0;
-  font-weight: 800; font-variation-settings: "wdth" 75;
+  font-weight: 800; font-stretch: 75%;
   font-size: clamp(3.4rem, 13vw, 13rem);
   line-height: .82; letter-spacing: -.035em; text-transform: uppercase;
 }
@@ -541,7 +541,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
   display: flex; align-items: center; gap: 1rem;
   padding: 14px var(--gutter); border-bottom: 2px solid #3a2e2b;
 }
-.lightbox__title { margin: 0; font-weight: 800; font-size: 1.4rem; text-transform: uppercase; font-variation-settings: "wdth" 75; }
+.lightbox__title { margin: 0; font-weight: 800; font-size: 1.4rem; text-transform: uppercase; font-stretch: 75%; }
 .lightbox__count { margin: 0 0 0 auto; }
 .lightbox__close {
   background: var(--yellow); color: var(--ink); border: 2px solid var(--cream);
